@@ -1,0 +1,22 @@
+{
+  "Template": {
+    "TemplateName": "Preferences3",
+    "SubjectPart": "{{firstName}}'s Subscription Preferences",
+    "HtmlPart": "{{#* inline \"fullName\"}}{{firstName}}{{#if lastName}} {{lastName}}{{/if}}{{/inline~}}\n<h1>Hello {{> fullName}}!</h1><p>You have listed the following people as your friends:</p><ul>{{#if friends}}<li>{{> fullName}}</li>{{/if}}</ul>",
+    "TextPart": "{{#* inline \"fullName\"}}{{firstName}}{{#if lastName}} {{lastName}}{{/if}}{{/inline~}}\nHello {{> fullName}}! You have listed the following peopleas your friends:\n{{#each friends}}- {{> fullName}}\n{{/each}}"
+  },
+  "Data": {
+    "firstName": "John",
+    "lastName": "Doe",
+    "friends": [
+      {
+        "firstName": "Jane",
+        "lastName": "Smith"
+      },
+      {
+        "firstName": "Bob",
+        "lastName": "Johnson"
+      }
+    ]
+  }
+}
